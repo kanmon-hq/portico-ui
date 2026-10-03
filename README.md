@@ -1,4 +1,4 @@
-# @kanmon/portico-ui
+# @kanmon-hq/portico-ui
 
 Portico FastMCP Hub & Gateway 向けの組み込み型 Web Components UI ライブラリ。  
 Vue 3、React、Next.js、Vanilla HTML などあらゆるフロントエンド環境に単一のカスタム要素として簡単に組み込み可能です。
@@ -12,8 +12,16 @@ Vue 3、React、Next.js、Vanilla HTML などあらゆるフロントエンド�
 
 ## インストール
 
+GitHub Packages (`@kanmon-hq` スコープ) からインストールします。プロジェクト直下の `.npmrc` に以下を設定してください：
+
+```ini
+@kanmon-hq:registry=https://npm.pkg.github.com
+```
+
+その後、パッケージをインストールします：
+
 ```bash
-npm install @kanmon/portico-ui
+npm install @kanmon-hq/portico-ui
 ```
 
 ## 使い方 (Vue 3 / React)
@@ -21,7 +29,7 @@ npm install @kanmon/portico-ui
 ### Vue 3
 ```vue
 <script setup lang="ts">
-import '@kanmon/portico-ui'
+import '@kanmon-hq/portico-ui'
 
 const tenants = [
   { id: 'tenant-corp-a', name: '企業 A' },
@@ -44,7 +52,7 @@ import React, { useEffect } from 'react'
 
 export function PorticoAdminPage() {
   useEffect(() => {
-    import('@kanmon/portico-ui')
+    import('@kanmon-hq/portico-ui')
   }, [])
 
   return (
